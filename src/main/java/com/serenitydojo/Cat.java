@@ -18,7 +18,7 @@ public class Cat extends Pet {
         this.favoriteToy = favoriteToy;
     }
 
-    @Override
+
     public String play() {
         return "plays with string";
     }

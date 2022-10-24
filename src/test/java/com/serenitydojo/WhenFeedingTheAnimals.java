@@ -5,8 +5,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class WhenFeedingTheAnimals {
-
-    @Test
+    //Oridnary food test
+    @Test()
     public void shouldFeedCatsTuna() {
         Feeder feeder = new Feeder();
 
@@ -33,6 +33,7 @@ public class WhenFeedingTheAnimals {
         Assert.assertEquals("Dog Food", food);
     }
 
+    //Premium food test
     @Test
     public void shouldFeedPremiumCatsPremiumFood() {
         Feeder feeder = new Feeder();
@@ -40,6 +41,24 @@ public class WhenFeedingTheAnimals {
         String food = feeder.feeds("Cat", true);
 
         Assert.assertEquals("Salmon", food);
+
+    }
+    @Test
+    public void shouldFeedPremiumDogPremiumFood() {
+        Feeder feeder = new Feeder();
+
+        String food = feeder.feeds("Dog", true);
+
+        Assert.assertEquals("Beef", food);
+
+    }
+    @Test
+    public void shouldFeedPremiumHamsterPremiumFood() {
+        Feeder feeder = new Feeder();
+
+        String food = feeder.feeds("Hamster", true);
+
+        Assert.assertEquals("Lettuce", food);
 
     }
 }
